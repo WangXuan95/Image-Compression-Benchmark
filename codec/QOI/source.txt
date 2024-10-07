@@ -1,0 +1,6 @@
+QOI Copyright from:
+https://qoiformat.org/
+
+QOI codec from:
+https://github.com/WangXuan95/ImCvt
+(v0.5)

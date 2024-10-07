@@ -1,0 +1,4 @@
+Source and Copyright from:
+http://www.stat.columbia.edu/~jakulin/jpeg-ls/mirror.htm
+
+this code is slightly modified from V.1.1:jpeg_ls_v1.1.tar.gz
