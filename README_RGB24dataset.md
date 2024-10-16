@@ -1,4 +1,4 @@
-# Run RGB 24-bit benchmark
+# Get RGB 24-bit dataset
 
 The RGB 24-bit image benchmark data set has 585 images totaling 4GB from [CLIC2021 competition](https://clic.compression.cc/2021/tasks/index.html).
 
@@ -29,9 +29,5 @@ To get the benchmark images, you should download them as follow steps:
   
   <i>Note: .pnm is a simple uncompressed image format. Many compressors support .pnm format as input.</i> 
   
-- Then, put these 585 .pnm files to a folder, then run the python script [RunBenchmark.py](./RunBenchmark.py) :
+- Then, put these 585 .pnm files to a folder, then run the benchmark. See [README_Run.md](./README_Run.md)
   
-  ```
-  python RunBenchmark.py <path_that_contains_pnm_files>
-  ```
-  Note: You can specify the image format you want to benchmark by modifying [RunBenchmark.py](./RunBenchmark.py)

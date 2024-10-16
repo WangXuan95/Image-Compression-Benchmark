@@ -1,0 +1,3 @@
+source and Copyright from:
+https://github.com/catid/Zpng
+(modified to support converting .zpng to .ppm)

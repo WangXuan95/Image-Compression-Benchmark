@@ -12,8 +12,12 @@ from PIL import Image   # some image format is encoded/decoded using this librar
 import pillow_jpls      # to encode/decode JPEG-LS
 
 
-CODEC_LIST = [  #  note : support=0b01 means this codec only support Gray8, support=0b10 means this codec only support RGB888, support=0b11 means this codec only support both Gray8 and RGB888.
+# NOTE: uncomment lines to select which format to participate in benchmark
+CODEC_LIST = [
  #    codec_name, support , fsuffix  , encode_command_format                                                   , decode_command_format
+ #                0b11 = this codec support both Gray8 and RGB888
+ #                0b10 = this codec support RGB888 only
+ #                0b01 = this codec support Gray8 only
     [ 'fNBLI'   , 0b11    , '.fnbli' , r'codec\NBLI\fNBLI.exe -f   {0} -o {1}'                                 , r'codec\NBLI\fNBLI.exe   -f   {0} -o {1}'                 ],
     [ 'NBLI'    , 0b11    , '.nbli'  , r'codec\NBLI\NBLI.exe  -f   {0} -o {1}'                                 , r'codec\NBLI\NBLI.exe    -f   {0} -o {1}'                 ],
  #  [ 'PNG'     , 0b11    , '.png'   , r'Image.open(r"{0}").save(r"{1}", optimize=True)'                       , r'Image.open(r"{0}").save(r"{1}")'                        ],
@@ -24,6 +28,9 @@ CODEC_LIST = [  #  note : support=0b01 means this codec only support Gray8, supp
  #  [ 'JPEG2000', 0b11    , '.j2k'   , r'Image.open(r"{0}").save(r"{1}",format="JPEG2000",irreversible=False)' , r'Image.open(r"{0}").save(r"{1}")'                        ],
  #  [ 'WEBP'    , 0b11    , '.webp'  , r'Image.open(r"{0}").save(r"{1}",lossless=True,quality=100,method=5)'   , r'Image.open(r"{0}").save(r"{1}")'                        ],
  #  [ 'QOI'     , 0b10    , '.qoi'   , r'codec\QOI\ImCvt.exe     -f {0} -o {1}'                                , r'codec\QOI\ImCvt.exe     -f {0} -o {1}'                  ],
+ #  [ 'QOIR'    , 0b10    , '.qoir'  , r'codec\QOIR\QOIR.exe        {0}    {1}'                                , r'codec\QOIR\QOIR.exe        {0}    {1}'                  ],
+    [ 'ZPNG -1' , 0b11    , '.zpng'  , r'codec\ZPNG\ZPNG.exe -c     {0}    {1}'                                , r'codec\ZPNG\ZPNG.exe -d     {0}    {1}'                  ],
+    [ 'ZPNG -18', 0b11    , '.zpng'  , r'codec\ZPNG\ZPNG.exe -18    {0}    {1}'                                , r'codec\ZPNG\ZPNG.exe -d     {0}    {1}'                  ],
  #  [ 'BMF'     , 0b11    , '.bmf'   , r'codec\BMF\BMF.exe           -O{1} {0}'                                , r'codec\BMF\BMF.exe -pnm      -O{1} {0}'                  ],
  #  [ 'BMF'     , 0b11    , '.bmf'   , r'codec\BMF\BMF.exe -s        -O{1} {0}'                                , r'codec\BMF\BMF.exe -pnm      -O{1} {0}'                  ],
  #  [ 'QIC'     , 0b10    , '.qic'   , r'codec\QIC\QIC.exe           c {1} {0}'                                , r'codec\QIC\QIC.exe           d {0} {1}'                  ],

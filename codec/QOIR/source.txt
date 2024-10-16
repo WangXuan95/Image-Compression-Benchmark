@@ -1,0 +1,3 @@
+source and Copyright from:
+https://github.com/nigeltao/qoir
+(modified to support converting .ppm to .qoir and converting .qoir to .ppm)

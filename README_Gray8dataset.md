@@ -1,4 +1,4 @@
-# Run Gray 8-bit benchmark
+# Get Gray 8-bit dataset
 
 The gray 8-bit image benchmark data set has 62 images totaling 751 MB, which is as same as the 62 images in <a href="http://qlic.altervista.org/">RGB 24-bit  LPCB</a>, but has converted to gray 8-bit.
 
@@ -36,13 +36,10 @@ To get the benchmark images, you should download them as follow steps:
   ```
   <i>Note: .pnm is a simple uncompressed image format. Many compressors support .pnm format as input.</i>
   
-- Then, put these 62 .pnm files to a folder, then run the python script [RunBenchmark.py](./RunBenchmark.py) :
+- Then, put these 62 .pnm files to a folder, then run the benchmark. See [README_Run.md](README_Run.md) 
   
-  ```
-  python RunBenchmark.py <path_that_contains_pnm_files>
-  ```
-  Note: You can specify the image format you want to benchmark by modifying [RunBenchmark.py](./RunBenchmark.py)
-  
+
+
 
 　
 
