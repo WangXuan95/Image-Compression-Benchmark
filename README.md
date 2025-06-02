@@ -365,34 +365,34 @@ There are 3 types of codecs (coder/decoder):
 
 Note: If you want to add any other formats, please submit an issue.
 
-|                             Name                                                                                         |                         Spec / Author                                          |                    path in this benchmark                                                           |    open source?    |   gray 8-bit ?     |    RGB 24-bit ?    |
-| :----------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------- | :----------------: | :----------------: | :----------------: |
-| [**PNG**](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png)                                  | [RFC 2083](https://www.rfc-editor.org/rfc/rfc2083.html)                        | [python pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png)       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [**PNG**](https://optipng.sourceforge.net/) ([optipng](https://optipng.sourceforge.net/) 0.7.7)                          | [RFC 2083](https://www.rfc-editor.org/rfc/rfc2083.html)                        | `./codec/PNG/`                                                                                      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [**WEBP**](https://en.wikipedia.org/wiki/WebP)                                                                           | [Google website](https://developers.google.com/speed/webp/docs/riff_container) | [python pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#webp)      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [**JPEG2000**](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#jpeg-2000)                       | ISO/IEC 15444-1                                                                | [python pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#jpeg-2000) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [**JPEG-LS**](http://www.stat.columbia.edu/~jakulin/jpeg-ls/mirror.htm)                                                  | ITU-T T.87                                                                     | [python pillow](https://pypi.org/project/pillow-jpls/)                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [**JPEG-XL**](https://github.com/libjxl/libjxl/releases) v0.9.0 *(1)*                                                    | ISO/IEC 18181                                                                  | `./codec/JPEG-XL/`                                                                                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [**QOI**](https://qoiformat.org/)                                                                                        | [D. Szablewski](https://qoiformat.org/qoi-specification.pdf)                   | `./codec/QOI/`                                                                                      | :heavy_check_mark: | :x:                | :heavy_check_mark: |
-| [**QOIR**](https://github.com/nigeltao/qoir)                                                                             | [Nigel Tao](https://github.com/nigeltao)                                       | `./codec/QOIR/`                                                                                     | :heavy_check_mark: | :x:                | :heavy_check_mark: |
-| [**ZPNG**](https://github.com/catid/Zpng)                                                                                | [Chris Taylor](https://github.com/catid)                                       | `./codec/ZPNG/`                                                                                     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [**NBLI**](https://github.com/WangXuan95/NBLI) v0.4                                                                      | [X.Wang](https://github.com/WangXuan95)                                        | `./codec/NBLI/`                                                                                     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [**fNBLI**](https://github.com/WangXuan95/NBLI) v0.4                                                                     | [X.Wang](https://github.com/WangXuan95)                                        | `./codec/NBLI/`                                                                                     |        :x:         | :heavy_check_mark: | :heavy_check_mark: |
-| [**HALIC**](https://github.com/Hakan-Abbas/HALIC-High-Availability-Lossless-Image-Compression-/releases/tag/0.7.2) 0.7.2 | [Hakan Abbas](https://github.com/Hakan-Abbas)                                  | `./codec/HALIC/`                                                                                    |        :x:         | :heavy_check_mark: | :heavy_check_mark: |
-| [**BMF**](http://compression.ru/compression.ru/ds/) v2.01                                                                | [Dmitry Shkarin](http://compression.ru/compression.ru/ds/)                     | `./codec/BMF/`                                                                                      |        :x:         | :heavy_check_mark: | :heavy_check_mark: |
-| [**EMMA**](https://globalcompetition.compression.ru/assets/files/compressors/)                                           | [Marcio Pais](https://encode.su/members/4093-mpais)                            | `./codec/EMMA/`                                                                                     |        :x:         | :x:                | :heavy_check_mark: |
-| [**LEA**](https://encode.su/threads/3818-LEA-Lossless-image-compressor) v0.6 beta                                        | [Marcio Pais](https://encode.su/members/4093-mpais)                            | `./codec/LEA/`                                                                                      |        :x:         | :x:                | :heavy_check_mark: |
-| [**Gralic**](http://www.imagecompression.info/gralic/Gralic111d.zip) v1.11                                               | [Alex Rhatushnyak](https://www.linkedin.com/in/theinventor/)                   | `./codec/GRALIC/`                                                                                   |        :x:         | bug?               | :heavy_check_mark: |
-| [**FLIC**](http://www.imagecompression.info/gralic/flic21d.zip) v2.1                                                     | [Alex Rhatushnyak](https://www.linkedin.com/in/theinventor/)                   | `./codec/FLIC/`                                                                                     |        :x:         | :x:                | :heavy_check_mark: |
-| [**QLIC2**](http://qlic.altervista.org/qlic2d.zip) v2                                                                    | [Alex Rhatushnyak](https://www.linkedin.com/in/theinventor/)                   | `./codec/QLIC2/`                                                                                    |        :x:         | :x:                | :heavy_check_mark: |
-| [**QIC**](http://www.imagecompression.info/gralic/qic1d.zip) v1                                                          | [Alex Rhatushnyak](https://www.linkedin.com/in/theinventor/)                   | `./codec/QIC/`                                                                                      |        :x:         | :x:                | :heavy_check_mark: |
-| [**BIM**](https://compressme.net/) v0.03                                                                                 | [Ilya Muravyov](https://compressme.net/)                                       | `./codec/BIM/`                                                                                      |        :x:         | :x:                | :heavy_check_mark: |
-| [**KVICK**](https://globalcompetition.compression.ru/assets/files/compressors)                                           | [A. Debski](https://www.linkedin.com/in/andreas-debski-b606021a1/)             | `./codec/KVICK/`                                                                                    |        :x:         | :x:                | :heavy_check_mark: |
-| [**PGLZ**](https://globalcompetition.compression.ru/assets/files/compressors)                                            | Peter Thamm                                                                    | `./codec/PGLZ/`                                                                                     |        :x:         | :x:                | :heavy_check_mark: |
-| [**agiannis_image**](https://globalcompetition.compression.ru/assets/files/compressors)                                  | [K. Agiannis](https://github.com/algorithm314)                                 | `./codec/agiannis_image/`                                                                           |        :x:         | :x:                | :heavy_check_mark: |
-| [**JPEG-LS-ext**](https://github.com/WangXuan95/JPEG-LS_extension)                                                       | ITU-T T.870                                                                    | `./codec/JPEG-LS_extension/`                                                                        | :heavy_check_mark: | :heavy_check_mark: |        :x:         |
-| [**CALIC**](https://www.ece.mcmaster.ca/~xwu/)                                                                           | [X. Wu et al.](https://ieeexplore.ieee.org/document/585919)                    | `./codec/CALIC/`                                                                                    |        :x:         | :heavy_check_mark: |        :x:         |
-| [**MRP**](https://www.rs.tus.ac.jp/matsuda-lab/matsuda/mrp/index.html) v0.5 *(2)*                                        | [I. Matsuda et al.](https://ieeexplore.ieee.org/document/7078076)              | `./codec/MRP/`                                                                                      | :heavy_check_mark: | :heavy_check_mark: |        :x:         |
+| Name                                                         |                        Spec / Author                         | path in this benchmark                                       |    open source?    |    gray 8-bit ?    |    RGB 24-bit ?    |
+| :----------------------------------------------------------- | :----------------------------------------------------------: | :----------------------------------------------------------- | :----------------: | :----------------: | :----------------: |
+| [**PNG**](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png) |   [RFC 2083](https://www.rfc-editor.org/rfc/rfc2083.html)    | [python pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [**PNG**](https://optipng.sourceforge.net/) ([optipng](https://optipng.sourceforge.net/) 0.7.7) |   [RFC 2083](https://www.rfc-editor.org/rfc/rfc2083.html)    | `./codec/PNG/`                                               | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [**WEBP**](https://en.wikipedia.org/wiki/WebP)               | [Google website](https://developers.google.com/speed/webp/docs/riff_container) | [python pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#webp) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [**JPEG2000**](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#jpeg-2000) |                       ISO/IEC 15444-1                        | [python pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#jpeg-2000) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [**JPEG-LS**](http://www.stat.columbia.edu/~jakulin/jpeg-ls/mirror.htm) |                          ITU-T T.87                          | [python pillow](https://pypi.org/project/pillow-jpls/)       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [**JPEG-XL**](https://github.com/libjxl/libjxl/releases) v0.9.0 *(1)* |                        ISO/IEC 18181                         | `./codec/JPEG-XL/`                                           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [**QOI**](https://qoiformat.org/)                            | [D. Szablewski](https://qoiformat.org/qoi-specification.pdf) | `./codec/QOI/`                                               | :heavy_check_mark: |        :x:         | :heavy_check_mark: |
+| [**QOIR**](https://github.com/nigeltao/qoir)                 |           [Nigel Tao](https://github.com/nigeltao)           | `./codec/QOIR/`                                              | :heavy_check_mark: |        :x:         | :heavy_check_mark: |
+| [**ZPNG**](https://github.com/catid/Zpng)                    |           [Chris Taylor](https://github.com/catid)           | `./codec/ZPNG/`                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [**NBLI**](https://github.com/WangXuan95/NBLI) v0.4          |           [X.Wang](https://github.com/WangXuan95)            | `./codec/NBLI/`                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [**fNBLI**](https://github.com/WangXuan95/NBLI) v0.4         |           [X.Wang](https://github.com/WangXuan95)            | `./codec/NBLI/`                                              |        :x:         | :heavy_check_mark: | :heavy_check_mark: |
+| [**HALIC**](https://github.com/Hakan-Abbas/HALIC-High-Availability-Lossless-Image-Compression-/releases/tag/0.7.2) 0.7.2 |        [Hakan Abbas](https://github.com/Hakan-Abbas)         | `./codec/HALIC/`                                             |        :x:         | :heavy_check_mark: | :heavy_check_mark: |
+| [**BMF**](http://compression.ru/compression.ru/ds/) v2.01    |  [Dmitry Shkarin](http://compression.ru/compression.ru/ds/)  | `./codec/BMF/`                                               |        :x:         | :heavy_check_mark: | :heavy_check_mark: |
+| [**EMMA**](https://globalcompetition.compression.ru/assets/files/compressors/) |     [Marcio Pais](https://encode.su/members/4093-mpais)      | `./codec/EMMA/`                                              |        :x:         |        :x:         | :heavy_check_mark: |
+| [**LEA**](https://encode.su/threads/3818-LEA-Lossless-image-compressor) v0.6 beta |     [Marcio Pais](https://encode.su/members/4093-mpais)      | `./codec/LEA/`                                               |        :x:         |        :x:         | :heavy_check_mark: |
+| [**Gralic**](http://www.imagecompression.info/gralic/Gralic111d.zip) v1.11 | [Alex Rhatushnyak](https://www.linkedin.com/in/theinventor/) | `./codec/GRALIC/`                                            |        :x:         |        bug?        | :heavy_check_mark: |
+| [**FLIC**](http://www.imagecompression.info/gralic/flic21d.zip) v2.1 | [Alex Rhatushnyak](https://www.linkedin.com/in/theinventor/) | `./codec/FLIC/`                                              |        :x:         |        :x:         | :heavy_check_mark: |
+| [**QLIC2**](http://qlic.altervista.org/qlic2d.zip) v2        | [Alex Rhatushnyak](https://www.linkedin.com/in/theinventor/) | `./codec/QLIC2/`                                             |        :x:         |        :x:         | :heavy_check_mark: |
+| [**QIC**](http://www.imagecompression.info/gralic/qic1d.zip) v1 | [Alex Rhatushnyak](https://www.linkedin.com/in/theinventor/) | `./codec/QIC/`                                               |        :x:         |        :x:         | :heavy_check_mark: |
+| [**BIM**](https://compressme.net/) v0.03                     |           [Ilya Muravyov](https://compressme.net/)           | `./codec/BIM/`                                               |        :x:         |        :x:         | :heavy_check_mark: |
+| [**KVICK**](https://globalcompetition.compression.ru/assets/files/compressors) | [A. Debski](https://www.linkedin.com/in/andreas-debski-b606021a1/) | `./codec/KVICK/`                                             |        :x:         |        :x:         | :heavy_check_mark: |
+| [**PGLZ**](https://globalcompetition.compression.ru/assets/files/compressors) |                         Peter Thamm                          | `./codec/PGLZ/`                                              |        :x:         |        :x:         | :heavy_check_mark: |
+| [**agiannis_image**](https://globalcompetition.compression.ru/assets/files/compressors) |        [K. Agiannis](https://github.com/algorithm314)        | `./codec/agiannis_image/`                                    |        :x:         |        :x:         | :heavy_check_mark: |
+| [**JPEG-LS-ext**](https://github.com/WangXuan95/ImCvt)       |                         ITU-T T.870                          | `./codec/QOI/`                                               | :heavy_check_mark: | :heavy_check_mark: |        :x:         |
+| [**CALIC**](https://www.ece.mcmaster.ca/~xwu/)               | [X. Wu et al.](https://ieeexplore.ieee.org/document/585919)  | `./codec/CALIC/`                                             |        :x:         | :heavy_check_mark: |        :x:         |
+| [**MRP**](https://www.rs.tus.ac.jp/matsuda-lab/matsuda/mrp/index.html) v0.5 *(2)* | [I. Matsuda et al.](https://ieeexplore.ieee.org/document/7078076) | `./codec/MRP/`                                               | :heavy_check_mark: | :heavy_check_mark: |        :x:         |
 
 > *(1)*: The well-known **FLIF** (Free Lossless Image Format) was superseded by **JPEG-XL**.*
 > *(2)*: MRP can only compress gray 8-bit images with size multiple of 8.*
@@ -401,44 +401,44 @@ Note: If you want to add any other formats, please submit an issue.
 
 ## The commands to compress:
 
-| Codec             |  Command to compress                                                        |
-| :---------------- | :-------------------------------------------------------------------------- |
-| PNG (optipng)     | `optipng.exe -o2 -force in.pnm -out out.png`                                |
-| PNG               | `Image.open('in.pnm').save('out.png', optimize=True)`                       |
-| PNG               | `Image.open('in.pnm').save('out.png', optimize=False)`                      |
-| WEBP              | `Image.open('in.pnm').save('out.webp',lossless=True,quality=100,method=5)`  |
+| Codec             | Command to compress                                          |
+| :---------------- | :----------------------------------------------------------- |
+| PNG (optipng)     | `optipng.exe -o2 -force in.pnm -out out.png`                 |
+| PNG               | `Image.open('in.pnm').save('out.png', optimize=True)`        |
+| PNG               | `Image.open('in.pnm').save('out.png', optimize=False)`       |
+| WEBP              | `Image.open('in.pnm').save('out.webp',lossless=True,quality=100,method=5)` |
 | JPEG2000          | `Image.open('in.pnm').save('out.j2k',format='JPEG2000',irreversible=False)` |
-| JPEG-LS           | `Image.open('in.pnm').save('out.jls',spiff=None)`                           |
-| JPEG-XL v0.9.0    | `cjxl.exe in.pnm out.jxl -q 100 -e 8 --quiet --num_threads=0`               |
-| QOI               | `ImCvt.exe in.pnm -o out.qoi`                                               |
-| QOIR              | `QOIR.exe in.pnm out.qoir`                                                  |
-| ZPNG (-19)        | `ZPNG.exe -19 in.pnm out.zpng`                                              |
-| ZPNG              | `ZPNG.exe -c  in.pnm out.zpng`                                              |
-| NBLI v0.4         | `NBLI.exe -f  in.pnm -o out.nbli`                                           |
-| fNBLI v0.4        | `fNBLI.exe -f in.pnm -o out.fnbli`                                          |
-| HALIC v0.7.2      | `HALIC072e.exe in.pnm out.halic`                                            |
-| HALIC v0.7.2 fast | `HALIC072fe.exe in.pnm out.halic`                                           |
-| BMF v2.01         | `BMF.exe    -Oout.bmf in.pnm`                                               |
-| BMF v2.01 (-s)    | `BMF.exe -s -Oout.bmf in.pnm`                                               |
-| EMMA              | `emma_c.exe in.pnm out.emma`                                                |
-| LEA v0.6 beta     | `LEA.exe in.pnm out.lea`                                                    |
-| Gralic v1.11      | `Gralic111d.exe c out.gralic in.pnm`                                        |
-| FLIC 2.1          | `FLIC.exe c out.flic in.pnm`                                                |
-| QLIC2 v2          | `QLIC2.exe c out.qlic2 in.pnm`                                              |
-| QIC v1            | `QIC.exe c out.qic in.pnm`                                                  |
-| BIM v0.03         | `BIM.exe c in.pnm out.bim`                                                  |
-| KVICK             | `kvick.exe c i out.kvick in.pnm`                                            |
-| PGLZ              | `PGLZ -c in.pnm out.pglz`                                                   |
-| agiannis_image    | `agiannis_image c in.pnm out.agiannis_image`                                |
-| JPEG-LS-extension | `JLSx.exe in.pnm out.jlsxn`                                                 |
-| CALIC             | `python calic.py -e in.pnm out.calic 0`                                     |
-| MRP v0.5          | `mrp_enc.exe -o in.pnm out.mrp`                                             |
+| JPEG-LS           | `Image.open('in.pnm').save('out.jls',spiff=None)`            |
+| JPEG-XL v0.9.0    | `cjxl.exe in.pnm out.jxl -q 100 -e 8 --quiet --num_threads=0` |
+| QOI               | `ImCvt.exe in.pnm -o out.qoi`                                |
+| QOIR              | `QOIR.exe in.pnm out.qoir`                                   |
+| ZPNG (-19)        | `ZPNG.exe -19 in.pnm out.zpng`                               |
+| ZPNG              | `ZPNG.exe -c  in.pnm out.zpng`                               |
+| NBLI v0.4         | `NBLI.exe -f  in.pnm -o out.nbli`                            |
+| fNBLI v0.4        | `fNBLI.exe -f in.pnm -o out.fnbli`                           |
+| HALIC v0.7.2      | `HALIC072e.exe in.pnm out.halic`                             |
+| HALIC v0.7.2 fast | `HALIC072fe.exe in.pnm out.halic`                            |
+| BMF v2.01         | `BMF.exe    -Oout.bmf in.pnm`                                |
+| BMF v2.01 (-s)    | `BMF.exe -s -Oout.bmf in.pnm`                                |
+| EMMA              | `emma_c.exe in.pnm out.emma`                                 |
+| LEA v0.6 beta     | `LEA.exe in.pnm out.lea`                                     |
+| Gralic v1.11      | `Gralic111d.exe c out.gralic in.pnm`                         |
+| FLIC 2.1          | `FLIC.exe c out.flic in.pnm`                                 |
+| QLIC2 v2          | `QLIC2.exe c out.qlic2 in.pnm`                               |
+| QIC v1            | `QIC.exe c out.qic in.pnm`                                   |
+| BIM v0.03         | `BIM.exe c in.pnm out.bim`                                   |
+| KVICK             | `kvick.exe c i out.kvick in.pnm`                             |
+| PGLZ              | `PGLZ -c in.pnm out.pglz`                                    |
+| agiannis_image    | `agiannis_image c in.pnm out.agiannis_image`                 |
+| JPEG-LS-extension | `ImCvt.exe in.pnm -o out.jlsx`                               |
+| CALIC             | `python calic.py -e in.pnm out.calic 0`                      |
+| MRP v0.5          | `mrp_enc.exe -o in.pnm out.mrp`                              |
 
 　
 
 ## The commands to decompress:
 
-| Format            |  Command to decompress                            |
+| Format            | Command to decompress                             |
 | :---------------- | :------------------------------------------------ |
 | PNG               | `Image.open('in.png').save('out.pnm')`            |
 | WEBP              | `Image.open('in.webp').save('out.pnm')`           |
@@ -463,7 +463,7 @@ Note: If you want to add any other formats, please submit an issue.
 | KVICK             | `kvick.exe d i in.kvick out.pnm`                  |
 | PGLZ              | `PGLZ -d in.pglz out.pnm`                         |
 | agiannis_image    | `agiannis_image d in.agiannis_image out.pnm`      |
-| JPEG-LS-extension | `JLSx.exe in.jlsxn out.pnm`                       |
+| JPEG-LS-extension | `ImCvt.exe in.jlsx -o out.pnm`                    |
 | CALIC             | `python calic.py -d in.calic out.raw`             |
 | MRP v0.5          | `mrp_dec.exe in.mrp out.pnm`                      |
 
