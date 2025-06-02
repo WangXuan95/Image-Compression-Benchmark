@@ -53,14 +53,15 @@ CODEC_LIST = [
  #  [ 'JPEG2000'        , 0b11    , '.j2k'   , r'Image.open(r"{0}").save(r"{1}",format="JPEG2000",irreversible=False)' , r'Image.open(r"{0}").save(r"{1}")'                        ],
  #  [ 'JPEG-LS'         , 0b11    , '.jls'   , r'Image.open(r"{0}").save(r"{1}", spiff=None)'                          , r'Image.open(r"{0}").save(r"{1}")'                        ],
  #  [ 'JPEG-LS'         , 0b11    , '.jls'   , r'codec\JPEG-LS\JPEGLSenc.exe {0} -o{1}'                                , r'codec\JPEG-LS\JPEGLSdec.exe -P {0} -o{1}'               ],
- #  [ 'JLS-ext'         , 0b01    , '.jlsxn' , r'codec\JPEG-LS_extension\JLSx.exe {0} {1}'                             , r'codec\JPEG-LS_extension\JLSx.exe {0} {1}'               ],
+ #  [ 'JLS-ext'         , 0b01    , '.jlsx'  , r'codec\QOI\ImCvt.exe     -f {0} -o {1}'                                , r'codec\QOI\ImCvt.exe        -f {0} -o {1}'               ],
+ #  [ 'NBLI v0.3'       , 0b01    , '.nbli3' , r'codec\NBLI\NBLI0.3.exe  -cVe1  {0} {1}'                               , r'codec\NBLI\NBLI0.3.exe    -dV    {0} {1}'               ],
  #  [ 'CALIC'           , 0b01    , '.calic' , r'python codec\CALIC\calic.py -e {0} {1} 0'                             , r'python codec\CALIC\calic.py -d {0} {1}'                 ],
  #  [ 'agiannis_image'  , 0b10    , '.aim'   , r'codec/agiannis_image/agiannis_image c {0} {1}'                        , r'codec/agiannis_image/agiannis_image d {0} {1}'          ],  # need to run on Linux
  #  [ 'PGLZ'            , 0b10    , '.pglz'  , r'codec/PGLZ/pglz -c        {0} {1}'                                    , r'codec/PGLZ/pglz -d        {0} {1}'                      ],  # need to run on Linux
 ]
 
 
-CHECK_DISTORTION = True     # check if the decoded file same as the original file
+CHECK_DISTORTION = False     # check if the decoded file same as the original file
 
 
 

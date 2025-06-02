@@ -1,3 +1,0 @@
-Copyright from:
-https://github.com/WangXuan95/JPEG-LS_extension
-(v0.1)
